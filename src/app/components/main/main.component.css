@@ -1,0 +1,30 @@
+  .example-card {
+    max-width: 400px;
+    margin-right: 2%;
+  }
+  
+  .strngth-header-image{
+    background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.ZM818ZKhcfae8dbcvjNgYAHaHa%26pid%3DApi&f=1');
+    background-size: cover;
+  }
+
+  .yoga-header-image {
+    background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fs3.envato.com%2Ffiles%2F117067780%2FColor%2520PNG%2FCat%2520Funny%2520Icon-03.png&f=1&nofb=1');
+    background-size: cover;
+  }
+
+  .parent-div {
+      margin: 2%;
+      display: flex;
+  }
+
+  mat-grid-tile {
+    background: lightblue;
+  }
+
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }

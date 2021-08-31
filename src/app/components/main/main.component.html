@@ -1,0 +1,126 @@
+
+<div class="parent-div" style="width: 100%; margin: 0%;"> 
+    
+<!--This is the group listing section-->
+<div style="width: 20%; height: 100%;">
+  <h3 style="padding: 10%; background-color:aquamarine;">Groups</h3>
+
+  <div *ngFor="let network of networks">
+    <mat-card class="example-card" style="padding: 5px; margin: 10px;" (click)="selectNetwork(network)">
+      <mat-card-content style="display: inline-flex;">
+          <img src="{{network.avatar}}" mat-card-avatar />
+          <div style="margin: auto; padding-left: 10px;">{{network.name}}</div>      
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>  
+<div style="border-left: 1px solid #dee2e6;"></div>
+<!--This is posts section-->
+<div style="width: 58%; height: 100%;; margin-left: 2%; margin-right: 2%; margin-top: 0.5%;">
+  <mat-card>
+    <mat-card-header>
+      <img src="{{selectedNetwork.avatar}}" mat-card-avatar />
+      <div style="margin: auto;">{{selectedNetwork.name}}</div> 
+    </mat-card-header>
+  </mat-card>
+
+  <div *ngFor="let post of posts">
+    <mat-card style="padding: 5px; margin: 10px;">
+      <mat-card-header>
+        <img src="{{post.avatar}}" mat-card-avatar />
+        <div style="padding-left: 10px;">{{post.name}}</div> 
+      </mat-card-header>
+      <hr>
+      <mat-card-content>
+        <img src="{{post.image}}" class="center">
+        <h3 class="center">{{post.content}}</h3>
+      </mat-card-content>
+      <mat-card-actions>
+        <div style="margin-left: 5px;">
+          <button mat-icon-button color="warn" style="width: 10%;">
+            <mat-icon>favorite</mat-icon>
+          </button>
+          <button mat-icon-button color="primary" style="width: 10%;">
+            dislike
+          </button>
+          <button mat-icon-button color="primary" style="width: 10%;">
+            <mat-icon>share</mat-icon>
+          </button>
+        </div>
+        <mat-form-field class="example-full-width" style="margin: 1%; width: 90%;" appearance="fill">
+          <mat-label>Leave a comment</mat-label>
+          <textarea matInput></textarea>
+        </mat-form-field>
+        <hr>
+        <mat-accordion>
+          <mat-expansion-panel (opened)="panelOpenState = true"
+                               (closed)="panelOpenState = false">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                comments
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <!--Add your code here -->
+          </mat-expansion-panel>
+        </mat-accordion>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>
+
+<div style="border-left: 1px solid #dee2e6;"></div>
+<!--This is Notification section-->
+<div style="width: 20%; height: 100%; margin-left: 1%;">
+    <mat-card>
+      <mat-card-header>
+        <h3>notificatios</h3>
+      </mat-card-header>
+      <mat-card-content>
+
+      </mat-card-content>
+    </mat-card>
+</div>
+  
+  
+  
+  
+  
+  <!--
+  <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="yoga-header-image"></div>
+          <mat-card-title>Mindfulness</mat-card-title>
+          <mat-card-subtitle>yoga</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.washington.edu%2Fwholeu%2Fwp-content%2Fuploads%2F2016%2F08%2Ffree-yoga.png&f=1&nofb=1" alt="Photo of a Shiba Inu">
+        <mat-card-content>
+          <h3>
+            "To ensure good health: eat lightly, breathe deeply, live moderately, cultivate cheerfulness, and maintain an interest in life.” 
+            – William Londen
+          </h3>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>SHARE</button>
+        </mat-card-actions>
+      </mat-card>
+
+      <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="strngth-header-image"></div>
+          <mat-card-title>Mindfulness</mat-card-title>
+          <mat-card-subtitle>yoga</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="https://www.podiumrunner.com/wp-content/uploads/sites/3/2020/05/GettyImages-1049840750.jpg" alt="">
+        <mat-card-content>
+          <h3>
+            “Positive thinking can be contagious. Being surrounded by winners helps you develop into a winner.”
+            ― Arnold Schwarzenegger
+          </h3>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>SHARE</button>
+        </mat-card-actions>
+      </mat-card>
+      <button mat-raised-button color="primary" [routerLink]="['/product']">Explore Products </button>
+      -->
+</div>
