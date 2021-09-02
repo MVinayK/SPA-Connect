@@ -11,7 +11,7 @@ export class PostsService {
 
   getPosts(network : Network) {
     console.log("yeah i am called !!!")
-    return this.http.get<Post>("http://localhost:8081/api/posts/" + network.id);
+    return this.http.get<Post>("http://localhost:8091/post?id=" + network.id);
   }
 
 }
